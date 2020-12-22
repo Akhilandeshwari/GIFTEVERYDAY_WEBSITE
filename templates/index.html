@@ -12,7 +12,7 @@
 
 </head>
 
-<body style="background-image: url({{url_for('static',filename='img/home_page.jpg')}}); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; ">
+<body background="C:\Users\akhil\Desktop\GIFTEVERYDAY\static\img\record.jpg">
     <h1>GIFT EVERYDAY</h1>
     <H2>SPREAD HAPPINESS ... !!! :-) ... EXPAND YOUR WORLD ... !!!</H2>
 <hr>
@@ -39,17 +39,20 @@
 <label class="form-check-label" for="ORDERS">
 <H3>ORDERS DETAILS</H3>
 </label>
-<p class="text-center">
-                <table border=0>
-                    <tr>
-                        <td>
-                            <input type="submit" class="content" value="Submit" name="submit"/>
-                        </td>
-                        <td>
-                            <input type="reset" class="content" value="Reset" name="reset"/>
-                        </td>
-                    </tr> 
-                </table>
+<input class="form-check-input" type="radio" name="exampleRadios" id="CD" value="option6">
+<label class="form-check-label" for="ORDERS">
+<H3>NEW CUSTOMER... REGISTER YOURSELF...</H3>
+</label>
+ENTER THE CUSTOMER NAME: <input type="text" name="newcust_name"/><br>
+ENTER THE CONTACT : <input type="text" name="newcust_cont"/><br>
+ENTER THE MAIL ID :  <input type="text" name="newcust_mail"/>
+<H1>
+<input type="submit" class="content" value="Submit" name="submit" ALIGN=LEFT style="width: 120px; height: 80px;background-color:green;" />
+<input type="reset" class="content" value="Reset" name="reset" ALIGN=RIGHT style="width: 120px; height: 80px;background-color:red;" />
+</td>
+</tr> 
+</table>
+</H2>
 </p>
 <!-- <button type="submit" class="btn btn-success" name="submit" formaction="\report">Report</buttton> -->
 </form>
