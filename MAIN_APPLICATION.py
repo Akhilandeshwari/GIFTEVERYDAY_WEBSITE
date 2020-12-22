@@ -19,6 +19,11 @@ def home():
 @cross_origin()
 def data():
     option = request.form['exampleRadios']
+    c1=request.form['newcust_name']
+    c2=request.form['newcust_cont']
+    c3=request.form['newcust_mail']
+    record=[c1,c2,c3]
+    
     if option == 'option1':
         data = pd.read_sql("SELECT * FROM DELIVERY_GIFT", conn)
         result=data.to_html()
@@ -41,7 +46,12 @@ def data():
     elif option == 'option5':
         data = pd.read_sql("SELECT * FROM ORDERS", conn)
         result=data.to_html()
-
+    elif option == 'option6':
+	      cursor=conn.cursor()
+	      inp="insert into customer values(?,?,?)"
+	      cursor.execute(inp,record)
+	      data=pd.read_sql("SELECT * FROM CUSTOMER", conn)
+	      result=data.to_html()
     return result
 
 
